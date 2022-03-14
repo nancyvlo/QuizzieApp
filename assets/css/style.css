@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,16 +6,17 @@
 }
 
 body {
-    background: blue;
+    background: #588cc4;
 }
 
-.start-btn {
+.start-btn, .info-box, .quiz-box {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
+/* Start Quiz Button Styling */
 .start-btn button {
     font-size: 25px;
     font-weight: 500;
@@ -28,8 +29,8 @@ body {
     cursor: pointer;
 }
 
-.info-box {
-    
+.info-box{
+    display: none;
     width: 540px;
     background: white;
     border-radius: 5px;
@@ -46,3 +47,100 @@ body {
     font-weight: 600;
 }
 
+.info-box .info-list {
+    padding: 15px 35px;
+}
+
+.info-box .info-list .info {
+    margin: 5px 0;
+    font-size: 17px;
+}
+
+.info-box .info-list .info span{
+    font-weight: 600;
+    color: blue;
+}
+
+.info-box .buttons {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 35px;
+    border-top: 1px solid lightgrey;
+}
+
+.info-box .buttons button {
+    margin: 0 5px;
+    height: 40px;
+    width: 100px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.buttons button.restart {
+    color: white;
+    background: blue;
+}
+
+.buttons button.restart:hover {
+    background: #588cc4;
+}
+
+.buttons button.quit {
+    color: blue;
+}
+
+.buttons button.quit:hover {
+    color: white;
+    background: blue;
+}
+
+.quiz-box {
+    width: 550px;
+    background: white;
+    border-radius: 5px;
+}
+
+.quiz-box header {
+    height: 70px;
+    padding: 0 30px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1)
+}
+
+.quiz-box header .title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.quiz-box header .timer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 145px;
+    height: 45px;
+    background: #cce5ff;
+    border: 1px solid #b8daff;
+    border-radius: 5px;
+    padding: 0 8px;
+}
+
+.quiz-box header .timer .time-text {
+    font-weight: 400;
+    font-size: 17px;
+    user-select: none;
+}
+
+.quiz-box header .timer .timer-sec {
+    
+}
