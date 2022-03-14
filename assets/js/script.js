@@ -30,7 +30,7 @@ const next_btn = quiz_box.querySelector(".next-btn");
 next_btn.onclick =()=>{
     que_count++;
     showQuestions(que_count);
-    que_count = 1
+    que_count = 1;
 }
 
 //questions and options//
